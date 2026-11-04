@@ -1,9 +1,9 @@
 # Sphinx configuration for the project hub (landing page).
 # Replace every YOUR-ORG / tool-* placeholder.
 
-project = "YOUR PROJECT NAME"
-author = "Val"
-copyright = "2026, Val"
+project = "vem-toolkit"
+author = "Valentin Gillet"
+copyright = "2026, Valentin Gillet"
 
 extensions = [
     "myst_nb",                 # Markdown (.md) + Jupyter notebooks (.ipynb)
@@ -26,18 +26,21 @@ exclude_patterns = ["_build", "**.ipynb_checkpoints", "requirements.txt"]
 intersphinx_mapping = {
     "python": ("https://docs.python.org/3", None),
     "numpy": ("https://numpy.org/doc/stable/", None),
-    # "tool_one": ("https://YOUR-ORG.github.io/tool-one/", None),
-    # "tool_two": ("https://YOUR-ORG.github.io/tool-two/", None),
+    "emalign": ("https://github.com/Heinze-lab/EMalign", None),
+    "emtrain": ("https://github.com/Heinze-lab/EMtrain", None),
+    "emsegment": ("https://github.com/Heinze-lab/EMsegment", None),
+    "synpred": ("https://github.com/Heinze-lab/SynPred", None),
+    "lsdtopcg": ("https://github.com/Heinze-lab/LSDtoPCG", None)
 }
 
 html_theme = "pydata_sphinx_theme"
 html_title = project
 html_static_path = ["_static"]
 html_theme_options = {
-    "github_url": "https://github.com/YOUR-ORG",
+    "github_url": "https://github.com/Heinze-lab",
     "navbar_align": "left",
     "show_toc_level": 2,
     "external_links": [
-        {"name": "Paper", "url": "https://doi.org/YOUR-DOI"},
+        {"name": "Paper", "url": "https://doi.org/10.7554/eLife.110789.1"},
     ],
 }
